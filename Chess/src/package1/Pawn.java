@@ -1,0 +1,14 @@
+import javax.swing.ImageIcon;
+
+public class Pawn extends Piece {
+
+    public Pawn(PieceColor color) {
+        super(color);
+    }
+
+    @Override
+    protected void loadIcon() {
+        String filename = isWhite() ? "/images/w_pawn.png" : "/images/b_pawn.png";
+        icon = new ImageIcon(getClass().getResource(filename));
+    }
+}
